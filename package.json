@@ -1,12 +1,41 @@
 {
-  "name": "ex_svelte",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "ex-svelte",
+	"version": "0.0.1",
+	"private": true,
+	"prisma": {
+		"seed": "pnpx vite-node prisma/seed.ts"
+	},
+	"scripts": {
+		"dev": "vite dev --open --host",
+		"build": "vite build",
+		"preview": "vite preview --open --host",
+		"test": "playwright test",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.32.2",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.15.2",
+		"@typescript-eslint/eslint-plugin": "^5.57.1",
+		"@typescript-eslint/parser": "^5.57.1",
+		"eslint": "^8.38.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-svelte3": "^4.0.0",
+		"prettier": "^2.8.7",
+		"prettier-plugin-svelte": "^2.10.0",
+		"svelte": "^3.58.0",
+		"svelte-check": "^3.2.0",
+		"tslib": "^2.5.0",
+		"typescript": "^5.0.4",
+		"vite": "^4.2.1",
+		"vitest": "^0.29.8"
+	},
+	"type": "module",
+	"dependencies": {
+		"@prisma/client": "^4.12.0"
+	}
 }
