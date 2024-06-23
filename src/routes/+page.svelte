@@ -1,1 +1,5 @@
-<h1>Home Page</h1>
+<script>
+</script>
+
+ 
+<a href="/runes">Runes</a>
